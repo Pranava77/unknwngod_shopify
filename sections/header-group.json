@@ -56,17 +56,7 @@
         "enable_customer_avatar": true,
         "margin_bottom": 0,
         "padding_top": 20,
-        "padding_bottom": 20,
-        "menu_items": [
-          {
-            "title": "Catalog",
-            "url": "/collections/all"
-          },
-          {
-            "title": "Shop",
-            "url": "/pages/shop"
-          }
-        ]
+        "padding_bottom": 20
       }
     }
   },
