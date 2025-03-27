@@ -93,7 +93,7 @@
     "custom_liquid_QPmqh3": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% assign faqs = site.data.faqs %}\n\n<section class=\"faq-section\">\n  <h2>Frequently Asked Questions</h2>\n  <div class=\"faq-container\">\n    {% for faq in faqs %}\n      <div class=\"faq-item\">\n        <button class=\"faq-question\">{{ faq.question }}</button>\n        <div class=\"faq-answer\">{{ faq.answer }}</div>\n      </div>\n    {% endfor %}\n  </div>\n</section>\n\n<style>\n  .faq-section { max-width: 800px; margin: auto; }\n  .faq-question { width: 100%; text-align: left; padding: 10px; font-weight: bold; }\n  .faq-answer { display: none; padding: 10px; }\n  .faq-item.active .faq-answer { display: block; }\n</style>\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    document.querySelectorAll(\".faq-question\").forEach(button => {\n      button.addEventListener(\"click\", function() {\n        this.parentElement.classList.toggle(\"active\");\n      });\n    });\n  });\n</script>",
+        "custom_liquid": "",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
