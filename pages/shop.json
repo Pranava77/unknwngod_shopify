@@ -1,0 +1,8 @@
+{
+  "name": "Shop All Products",
+  "handle": "shop",
+  "title": "Shop All Products",
+  "template_suffix": "shop",
+  "published": true,
+  "body_html": "<p>Discover our complete collection of products.</p>"
+} 
