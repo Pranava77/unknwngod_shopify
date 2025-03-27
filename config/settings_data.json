@@ -206,9 +206,9 @@
       },
       "scheme-d9c58f8a-65b7-4be3-b670-8798932ea415": {
         "settings": {
-          "background": "#1f1f21",
-          "background_gradient": "",
-          "text": "#ffffff",
+          "background": "#FFFFFF",
+          "background_gradient": "linear-gradient(46deg, rgba(0, 0, 0, 1) 13%, rgba(170, 248, 219, 1) 86%)",
+          "text": "#121212",
           "button": "#1a1a1d",
           "button_label": "#a64d79",
           "secondary_button_label": "#6a1e55",
