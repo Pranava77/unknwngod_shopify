@@ -1451,22 +1451,5 @@
         "default": "scheme-1"
       }
     ]
-  },
-  {
-    "name": "Menu Links",
-    "settings": [
-      {
-        "type": "link_list",
-        "id": "main_menu",
-        "label": "Main menu",
-        "default": "main-menu",
-        "links": [
-          {
-            "title": "Shop All",
-            "url": "/pages/shop"
-          }
-        ]
-      }
-    ]
   }
 ]
