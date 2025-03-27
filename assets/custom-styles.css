@@ -1,0 +1,115 @@
+/* Custom Masonry Grid Layout */
+.product-grid.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 10px;
+  grid-gap: 20px;
+}
+
+.product-grid.masonry-grid .grid__item {
+  grid-row-end: span var(--card-height);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.product-grid.masonry-grid .grid__item.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced Hover Effects */
+.card-wrapper {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Card Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate--fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-animation {
+  background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+  background-size: 2000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Custom Color Variables - You can modify these */
+:root {
+  --color-primary: #4a90e2;
+  --color-secondary: #50e3c2;
+  --color-accent: #ff6b6b;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --gradient-primary: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
+
+/* Enhanced Card Styling */
+.card {
+  background: var(--color-background);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__media img {
+  transition: transform 0.6s ease-in-out;
+}
+
+.card:hover .card__media img {
+  transform: scale(1.05);
+}
+
+/* Price Badge Styling */
+.price {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.button {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 12px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+} 
