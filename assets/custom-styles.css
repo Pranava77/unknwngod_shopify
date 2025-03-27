@@ -69,11 +69,16 @@
   --color-text: #333333;
   --color-text-light: #666666;
   --gradient-primary: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  --gradient-background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  --color-foreground: 255, 255, 255;
+  --color-button: 255, 255, 255;
+  --color-button-text: 0, 0, 0;
+  --color-shadow: 0, 0, 0;
 }
 
 /* Enhanced Card Styling */
 .card {
-  background: var(--color-background);
+  background: var(--gradient-background);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -93,23 +98,22 @@
 
 /* Price Badge Styling */
 .price {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgba(var(--color-foreground), 0.75);
   font-weight: bold;
 }
 
 /* Button Styling */
 .button {
-  background: var(--gradient-primary);
+  background: rgba(var(--color-button), 1);
   border: none;
   border-radius: 25px;
-  color: white;
+  color: rgb(var(--color-button-text));
   padding: 12px 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(var(--color-shadow), 0.2);
+  background: rgba(var(--color-button), 0.8);
 } 
