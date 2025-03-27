@@ -44,16 +44,11 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
   }
 
   .list-menu--inline {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
   }
 
   summary.list-menu__item {
@@ -64,29 +59,19 @@
     display: flex;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
-    padding: 0.5rem 0;
   }
 
   .list-menu__item--link {
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  .header__inline-menu {
-    margin-top: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
   @media screen and (min-width: 750px) {
-    .header__inline-menu {
-      margin-top: 0;
-    }
-
     .list-menu__item--link {
-      padding: 0.5rem 0;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
     }
   }
 </style>
@@ -161,27 +146,6 @@
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
     -%}
-
-    {%- if section.settings.menu != blank -%}
-      {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-        <nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list">
-            <li>
-              <a href="/pages/shop" class="header__menu-item list-menu__item link link--text focus-inset{% if request.page_type == 'page' and page.handle == 'shop' %} list-menu__item--active{% endif %}">
-                <span>Shop All</span>
-              </a>
-            </li>
-            {%- for link in section.settings.menu.links -%}
-              <li>
-                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset{% if link.current %} list-menu__item--active{% endif %}">
-                  <span>{{ link.title | escape }}</span>
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
-        </nav>
-      {%- endif -%}
-    {%- endif -%}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
